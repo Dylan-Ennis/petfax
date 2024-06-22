@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Pet Fact - PetFax</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Submit a New Pet Fact</h1>
+    <form action="#" method="post">
+        <div>
+            <label for="pet_name">Pet Name:</label>
+            <input type="text" id="pet_name" name="pet_name" required>
+        </div>
+        <div>
+            <label for="pet_photo">Pet Photo URL:</label>
+            <input type="url" id="pet_photo" name="pet_photo" required>
+        </div>
+        <div>
+            <label for="pet_fact">Pet Fact:</label>
+            <textarea id="pet_fact" name="pet_fact" required></textarea>
+        </div>
+        <div>
+            <label for="submitter">Submitter Name:</label>
+            <input type="text" id="submitter" name="submitter" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <a href="{{ url_for('pet.index') }}">Back to all pets</a>
+</body>
+</html>
